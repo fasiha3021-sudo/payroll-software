@@ -1,16 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="../manifest.json">
-  <link rel="stylesheet" href="style.css">
-  <title>Payrovia App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Software - Free Download</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+        }
+        .container { text-align: center; max-width: 600px; }
+        h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .download-btn { 
+            display: inline-block; 
+            background: #ff6b6b; 
+            color: white; 
+            padding: 20px 50px; 
+            font-size: 1.5em; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            margin: 20px; 
+            box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+            transition: all 0.3s;
+        }
+        .download-btn:hover { 
+            background: #ff5252; 
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,107,107,0.6);
+        }
+        .demo-btn { 
+            background: #4CAF50; 
+            color: white; 
+            padding: 15px 30px; 
+            font-size: 1.2em; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            margin: 10px;
+        }
+        .features { 
+            background: rgba(255,255,255,0.1); 
+            padding: 30px; 
+            border-radius: 20px; 
+            margin-top: 40px; 
+            backdrop-filter: blur(10px);
+        }
+        .features ul { list-style: none; text-align: left; }
+        .features li { margin: 10px 0; font-size: 1.1em; }
+        .features li:before { content: "✅"; margin-right: 10px; }
+    </style>
 </head>
 <body>
-  <h1>Welcome to Payrovia App!</h1>
-  <button id="apiBtn">Call Backend</button>
-  <p id="apiResponse"></p>
-  <script src="script.js"></script>
+    <div class="container">
+        <h1>🎯 Payroll Software</h1>
+        <p style="font-size: 1.2em; margin-bottom: 30px;">Complete Employee Management Solution</p>
+        
+        <a href="#demo" class="demo-btn">👀 Live Demo</a>
+        <a href="Payroll.apk" download class="download-btn">
+            📱 Download APK (Free - 12MB)
+        </a>
+        
+        <div class="features" style="margin-top: 40px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">✨ Key Features</h2>
+            <ul>
+                <li>Employee Salary Management</li>
+                <li>Attendance Tracking</li>
+                <li>Monthly Reports & Payslips</li>
+                <li>Offline Working</li>
+                <li>Easy Backup & Restore</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- LIVE DEMO SECTION -->
+    <div id="demo" style="max-width: 1000px; margin: 50px auto; padding: 30px; background: rgba(255,255,255,0.95); border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); display: none;">
+        <h2 style="text-align: center; color: #333; margin-bottom: 30px;">📱 Payroll Software - LIVE PREVIEW</h2>
+        <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; text-align: center; font-size: 18px; color: #333;">
+            <h3>🎯 Main Dashboard</h3>
+            <p><strong>Employee List | Add New | Salary Calculate | Reports</strong></p>
+            <div style="background: white; margin: 20px auto; padding: 30px; border-radius: 10px; max-width: 500px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                <h4>Sample Employee Data:</h4>
+                <p>Ali Ahmed - ₹25,000 - Present</p>
+                <p>Sara Khan - ₹30,000 - Leave</p>
+                <p>Total Salary: ₹1,25,000</p>
+                <button style="background: #2196F3; color: white; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 10px;">Generate Payslip</button>
+            </div>
+            <p style="margin-top: 20px; font-style: italic; color: #666;">
+                * Ye demo hai - Full features APK mein available!
+            </p>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="Payroll.apk" download class="download-btn" style="font-size: 1.3em; padding: 18px 40px;">⬇️ Download Complete App</a>
+        </div>
+    </div>
+
+    <script>
+        // Demo section toggle
+        document.querySelector('.demo-btn').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('demo').style.display = 'block';
+            document.querySelector('.container').style.display = 'none';
+            window.scrollTo(0, document.getElementById('demo').offsetTop);
+        }
+    </script>
+
+    <p style="margin-top: 50px; font-size: 0.9em; opacity: 0.8; text-align: center;">
+        ✅ Android 5.0+ | ✅ No Internet Required | ✅ 100% Free Forever
+    </p>
 </body>
 </html>
